@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CONTACT MILES</title>
+    <link rel="stylesheet" href="task.css">
+</head>
+<body>
+
+    <section class="contact section">
+        <div class=" contact-container">
+           
+                <h1 class = "contact-title">Contact Miles</h1>
+
+                <form>
+                <input type="text"
+                     placeholder="Name"
+                     onchange="InputChangeHandler(this.value)"/>
+
+             <input type="Number"
+                 placeholder="phone number"
+                onchange="telephoneChangeHandler(this.value)"
+                required/>
+
+                 <input type="password"
+                 placeholder="Password"
+                onchange = "PasswordInputHandler(this.value)"
+                required/>
+
+                    <input type="email"
+                     placeholder="Email"
+                   onchange = "EmailTaskHandler(this.value)"
+                 required/>
+
+                 <textarea class="text-area-class"
+                    placeholder="Enter Message"
+                    onchange= "MessageChangeHandler(this.value)"
+                    required
+
+                 > </textarea>
+
+               
+                     
+                     <button type ="button" 
+                onclick= "SendMessageHandler()"> SEND MESSAGE
+                    </button>
+                 </form>
+        </div>
+</section>
+
+<script>
+
+    let inputName= "saira";
+    const InputChangeHandler = (name) => {
+        console.log("check" , name);
+    
+    if(name === inputName){
+        console.log("similar");
+        alert("SIMILAR");
+    }else{
+        console.log("non-similar");
+    }
+}
+
+  let phoneNumber= "923094452601";
+  const telephoneChangeHandler = (phone) =>{
+    console.log("verify" , phone);
+
+    if(phone === phoneNumber) {
+        console.log("matched");
+        alert("MATCHED");
+    }else{
+        console.log("unmatched");
+        alert("UNMATCHED");
+    }
+  }
+
+  let PasswordCheck= "mozo2407";
+  const PasswordInputHandler= (Password) =>{
+    console.log("check" , Password);
+
+    if(Password === PasswordCheck){
+        console.log("identical");
+        alert("IDENTICAL");
+    }else{
+        console.log("non-identical");
+    }
+  }
+
+  let validEmail= "maryammunsha@gmail.com";
+  const EmailTaskHandler = (Email)=> {
+    console.log("valid", Email);
+
+    if(Email=== validEmail){
+        console.log("Validate Email");
+        alert("VALIDATE");
+    }else{
+        console.log("invalid");
+        alert("INVALID");
+    }
+}
+
+let acceptMessage = "Hello"; 
+const MessageChangeHandler = (Message) => {
+    console.log("accept", Message);
+
+
+     if(Message === acceptMessage){
+        console.log("Accepted");
+        alert("ACCEPTED");
+    
+    }else{
+        console.log("Not accepted");
+        alert("NOT ACCEPTED")
+    }
+}
+
+const SendMessageHandler = ()=> {
+    console.log("button clicked");
+    alert= ("Message sent successfully");
+}
+
+</script>
+ </body>
+
