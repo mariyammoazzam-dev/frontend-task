@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CONTACT MILES</title>
+    <link rel="stylesheet" href="button.css" />
+  </head>
+
+  <body></body>
+  <div>
+    <button onclick="submitHandler()">CLICK ME AND CHECK</button>
+  </div>
+
+  <script>
+    const dataArray = [23, 45, 56, 78, 76];
+
+    const secondArray = ["ALI", "Lahore", "Kinza", "Islamabad"];
+
+    const thirdArray = ["Lion", "cat", "DOG"];
+
+    let fruits = ["Apple", "Banana", "Mango", "Orange"];
+
+    console.log(fruits);
+
+    let obj = {
+      name: "ALI",
+      age: 20,
+    };
+
+    const fourthArray = [
+      {
+        name: "ALI",
+        age: 20,
+      },
+
+      {
+        name: "Sana",
+        age: 22,
+      },
+      {
+        name: "Ahmed",
+        age: 22,
+      },
+    ];
+
+    const submitHandler = () => {
+      dataArray.push(1000011);
+      console.log("working ", dataArray);
+
+      secondArray.push("New York, USA");
+
+      thirdArray.push("CAMEL");
+
+      thirdArray.map((value) => {
+        console.log(value);
+      });
+
+      console.log(thirdArray);
+      console.log(secondArray);
+
+      fourthArray.push({
+        name: "ZARDARI",
+        age: 62,
+      });
+      console.log(fourthArray);
+
+      fruits.pop();
+
+      console.log(fruits);
+    };
+  </script>
+</html>
