@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Examination Form</title>
+    <link rel="stylesheet" href="gcuf-form.css">
+</head>
+<body>
+
+<div class="form-container">
+
+    <div class="header">
+        <div class="logo">
+            <img src=" gcuf-logo.png" alt="Logo">
+        </div>
+<div class="university">
+            <h1>GC University, Faisalabad</h1>
+            <p>Allama Iqbal Road, Faisalabad</p>
+            <p>www.gcuf.edu.pk</p>
+        </div>
+
+        <div class="photo-box">
+            Passport Size Photograph
+        </div>
+    </div>
+
+    <h2>ADMISSION FORM</h2>
+
+    <div class="field">
+        <label>Candidate Name:</label>
+        <input type="text"
+        onchange= "candidateChangeHandler(this.value)">
+    </div>
+  <div class="field">
+        <label>CNIC:</label>
+        <input type="text"
+        onchange="identifierChangeHandler(this.value)">
+    </div>
+
+    <div class="field">
+        <label>Date of Birth:</label>
+        <input type="date"
+        onchange="inputChangeHandler(this.value)">
+    </div>
+
+    <div class="field">
+        <label>Father Name:</label>
+
+
+        <input type="text"
+        onchange="parentNameHandler(this.value)">
+    </div>
+
+    <div class="field">
+        <label>Address:</label>
+
+
+        <textarea   onchange= "addressChangeHandler(this.value)"></textarea>
+    </div>
+
+    <table>
+        <tr>
+            <th>Degree</th>
+            <th>Year</th>
+            <th>Marks</th>
+            <th>Board</th>
+        </tr>
+
+        <tr>
+            <td>Matric</td>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+        </tr>
+
+        <tr>
+            <td>Intermediate</td>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+        </tr>
+    </table>
+
+    <div class="signature">
+        <label>Signature:</label>
+        <input type="text">
+    </div>
+
+</div>
+
+</body>
+<script>
+    let CandidateName="Mouzam ali"
+    const candidateChangeHandler= (Candidate)=>{
+        console.log("check", Candidate);
+
+        if(Candidate=== CandidateName){
+            console.log("matched");
+            alert("MATCHED");
+        }else{
+            console.log("unmatched");
+            alert("UNMATCHED");
+        }
+    }
+
+
+    let identityNumber= 3660142782097
+    const identifierChangeHandler=(identity)=>{
+        console.log("similar", identity);
+
+        if (Number(identity)=== identityNumber){
+            console.log("identical");
+            alert("IDENTICAL");
+        }else{
+            console.log("non-identical");
+            alert("NON-IDENTICAL");
+        }
+    }
+
+    let dateInfo= "2000-07-22"
+
+    const inputChangeHandler= (date)=>{
+        console.log("verify", date);
+
+        if(date=== dateInfo){
+            console.log("accepted");
+            alert("ACCEPTED");
+        }else{
+            console.log("non-accepted")
+            alert("NON-ACCEPTED");
+        }
+    }
+
+    let verifyName= "Mohammad Saleem"
+    const parentNameHandler=(fatherName)=>{
+        console.log("check", fatherName);
+        
+        if(fatherName=== verifyName){
+            console.log("approved");
+            alert("APPROVED");
+        }else{
+            console.log("not approved");
+            alert("NOT APPROVED");
+        }
+    }
+
+    let checkAddress= "Canal bank housing scheme"
+    const addressChangeHandler= (Address)=>{
+        console.log("verify", Address);
+
+        if(Address === checkAddress) {
+            console.log("verified");
+            alert("VERIFIED");
+        }else{
+            console.log("non-verified");
+            alert("NON-VERIFIED");
+        }
+    }
+
+    
+    </script>
+</html>

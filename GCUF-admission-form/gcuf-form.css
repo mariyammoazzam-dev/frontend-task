@@ -1,0 +1,78 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial, sans-serif;
+    padding:20px;
+}
+
+.form-container{
+    width:100%;
+    border:2px solid black;
+    padding:20px;
+}
+
+.header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.logo img{
+    width:80px;
+}
+
+.university{
+    text-align:center;
+}
+
+.photo-box{
+    width:150px;
+    height:180px;
+    border:2px solid black;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+}
+
+.field{
+    margin-top:15px;
+}
+
+.field label{
+    display:block;
+    margin-bottom:5px;
+}
+
+.field input,
+.field textarea{
+    width:100%;
+    padding:8px;
+    border:1px solid black;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    margin-top:20px;
+}
+
+table,
+th,
+td{
+    border:1px solid black;
+}
+
+th,
+td{
+    padding:10px;
+    text-align:center;
+}
+
+.signature{
+    margin-top:20px;
+}
