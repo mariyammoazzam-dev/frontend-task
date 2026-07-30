@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KFC Order Page</title>
+    <link rel="stylesheet" href="KFC.css">
+</head>
+<body>
+
+    <header>
+    <nav class="navbar">
+        <div class="logo">KFC</div>
+
+        <ul class="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="hero">
+        <h1>KFC Order Page</h1>
+        <p>It's Finger Lickin' Good!</p>
+        
+    </div>
+
+
+    <section class="menu">
+
+        <div class="card">
+            <img src="burger.jpg.jpg" alt="Burger">
+            <h2>Zinger Burger</h2>
+            <p class="price">Rs. 650</p>
+            <button>Add to Cart</button>
+        </div>
+
+        <div class="card">
+            <img src="fries.jpg.jpg" alt="Fries">
+            <h2>French Fries</h2>
+            <p class="price">Rs. 250</p>
+            <button>Add to Cart</button>
+        </div>
+
+        <div class="card">
+            <img src="bucket.jpg.jpg" alt="Bucket">
+            <h2>Chicken Bucket</h2>
+            <p class="price">Rs. 1800</p>
+            <button>Add to Cart</button>
+        </div>
+
+    </section>
+
+    <section class="order-form">
+        <h2>Place Your Order</h2>
+
+        <input type="text"
+         placeholder="Enter Name"
+         onchange="NameChangeHandler(this.value)"/>
+
+
+        <input type="text"
+         placeholder="Enter Address"
+         onchange="AddressChangeHandler(this.value)"/>
+
+
+
+
+        <input type="tel"
+         placeholder="Enter Phone Number"
+         onchange="TelChangeHandler(this.value)"/>
+
+        <button class="order-btn"
+            onclick="OrderNowHandler()">
+        Order Now</button>
+    </section>
+
+</body>
+</html>
+
+<script>
+
+    let inputName="john Smith";
+    const NameChangeHandler=  (name) =>{
+        console.log("check", name );
+
+        if(inputName === name){
+        console.log("checked");
+        alert("CHECKED");
+        }else{
+            console.log("unchecked");
+            alert("UNCHECKED");
+        }
+    }
+
+    let addressName="Springfield Main street USA";
+    const AddressChangeHandler= (address) =>{
+        console.log("verify",address);
+
+        if(addressName === address) {
+            console.log("verified");
+            alert("VERIFIED");
+        }else{
+            console.log("non-verified");
+            alert("NON-VERIFIED");
+        }
+    }
+
+    let telNumber="03049992601";
+    const TelChangeHandler=(phone)=>{
+        console.log("working",phone);
+
+        if(telNumber === phone){
+            console.log("identical");
+            alert("IDENTICAL");
+        }else{
+            console.log("non-identical");
+            alert("NON-IDENTICAL");
+        }
+    }
+
+const orderArray=["zingerBurger","frenchfries","chickenbuckets"];
+
+const firstorderArray=["fries", "hotwings","drink(pepsi)"];
+
+  const secondorderArray=["burger","fries","pasta"];
+
+   let firstOrder= [
+        {
+            customerName: "john Smith",
+            item: "zinger burger",
+            quantity:2,
+        },
+    ];
+
+    const MenuArray= [
+        "zinger burger",
+        "chicken bucket",
+        "french fries",
+        "pepsi",
+    ];
+
+    const drinks=["pepsi", "7up", "Mirinda"];
+
+ const OrderNowHandler = ()=>{
+
+        console.log("Order button clicked");
+        alert("Your Order has been placed");
+
+        orderArray.push("colddrinks");
+        console.log(orderArray) ;
+
+        secondorderArray.push("nuggets");
+        console.log(secondorderArray);
+    }
+
+      firstOrder.push("status: delivered");
+      console.log(firstOrder);
+
+      MenuArray.pop();
+      console.log(MenuArray);
+
+      drinks.pop();
+      console.log(drinks);
+
+
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
